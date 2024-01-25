@@ -8,12 +8,11 @@ library(latex2exp)
 
 #############################################
 ## load packages and data
-# source("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all//01_load_packages_data.R")
+
 source(paste(path,"/01_load_packages_data.R",sep=""))
 # set the random seed
-set.seed(1234)
+set.seed(124)
 
-# setwd("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all/")
 setwd(path)
 
 ####### Figure 1 #######

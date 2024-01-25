@@ -7,22 +7,11 @@ library(scales)
 # set the random seed
 set.seed(124)
 
-# set.seed(95548)
-
-# setwd("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all/")
-# source("01_load_packages_data.R")
-source(paste(path,"/01_load_packages_data.R",sep=""))
-
-# setwd("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all/")
-setwd(path)
-
-
+source(paste(path,"/1_Load_packages_data.R",sep=""))
 
 setwd(path)
 
 dir.create("results/")
-
-dir.create("Figures/")
 
 df1$lag1_Meantemp <- df4$lag1_Meantemp
 df1$lag2_Meantemp <- df4$lag2_Meantemp

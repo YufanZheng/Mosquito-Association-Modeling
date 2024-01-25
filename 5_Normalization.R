@@ -105,7 +105,7 @@ MSE_matrix <- matrix(MSE, nrow=n_row, ncol=4, byrow=TRUE)
 df_result <- as.data.frame(MSE_matrix)
 colnames(df_result) <- c("Model","MSE_pre","MSE_fit","Name")
 
-write.csv(df_result, "Results/MSE_normal_result_1.csv",row.names=F)
+write.csv(df_result, "results/MSE_normal_result_1.csv",row.names=F)
 
 
 
@@ -156,6 +156,6 @@ MSE_matrix <- matrix(MSE, nrow=n_row, ncol=4, byrow=TRUE)
 df_result <- as.data.frame(MSE_matrix)
 colnames(df_result) <- c("Model","MSE_pre","MSE_fit","Name")
 
-write.csv(df_result, "Results/MSE_normal_result_2.csv",row.names=F)
+write.csv(df_result, "results/MSE_normal_result_2.csv",row.names=F)
 
 

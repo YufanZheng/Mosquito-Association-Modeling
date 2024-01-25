@@ -6,11 +6,9 @@ library(scales)
 library(INLA)
 
 # set the random seed
-set.seed(1234)
+set.seed(124)
 
-# setwd("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all/")
-# source("01_load_packages_data.R")
-source(paste(path,"/01_load_packages_data.R",sep=""))
+source(paste(path,"/1_Load_packages_data.R",sep=""))
 
 setwd(path)
 

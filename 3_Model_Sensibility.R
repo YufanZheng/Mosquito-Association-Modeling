@@ -3,7 +3,7 @@ path <-  getwd()
 
 #############################################
 ## load packages and data
-source(paste(path,"/01_load_packages_data.R",sep=""))
+source(paste(path,"/1_Load_packages_data.R",sep=""))
 # set the random seed
 set.seed(124)
 setwd(path)
@@ -44,7 +44,6 @@ mymodel <- function(formula, data = df3, family = "nbinomial", config = FALSE){
   model <- inla.rerun(model)
   return(model)
 }
-
 
 formula1 <- Y2 ~ 1 + f(T1, model = "iid") + f(T2, model = "iid") + basis_tr1 + basis_mt1 + f(S, model = "iid") + R
 name1 <- "A-R_temp"

@@ -3,7 +3,7 @@ path <-  getwd()
 
 #############################################
 ## load packages and data
-source(paste(path,"/01_load_packages_data.R",sep=""))
+source(paste(path,"/1_Load_packages_data.R",sep=""))
 # set the random seed
 set.seed(124)
 
