@@ -1,6 +1,7 @@
 # Mosquito-Association-Modeling
 
-Yufan Zheng (a,b), Keqi Yue (b), Eric W. M. Wong (a), Hsiang-Yu Yuanb, (c,*) 
+Yufan Zheng$^{a,b}$, Keqi Yue$^{b}$, Eric W. M. Wong$^{a}$, Hsiang-Yu Yuan$^{b,c,*}$ 
+
 (a)Department of Electrical Engineering, College of Engineering, City University of Hong Kong, Hong Kong SAR, China
 
 (b)Department of Biomedical Sciences, Jockey Club College of Veterinary Medicine and Life Sciences, City University of Hong Kong, Hong Kong SAR, China
