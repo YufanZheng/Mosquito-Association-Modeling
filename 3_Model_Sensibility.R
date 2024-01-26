@@ -210,7 +210,7 @@ fwrite(table_aoi, file = paste0("Model/AOI full model/Sen/",name2,"sensibility_t
 
 ##########sensitivity of the total rainfall lag within the best model (Model E-R) ################################
 name2 <- "E-R_rain"
-#####################################################
+
 nlag_t <- 2
 basis_mt1 <- lag_variable_temp_3(df=df,nlag=nlag_t)
 
