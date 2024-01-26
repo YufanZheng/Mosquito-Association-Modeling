@@ -29,9 +29,6 @@ dir.create("Model/Number of mosquitoes per 1000 traps/nbinomial/Sen/")
 dir.create("Model/AOI full model/Sen/")
 
 ###################################################
-## Model: To estimate the number of mosquitoes per 1000 traps during the period from April 2020 to August 2022
-# create a function to run a model for each formula in the list and save the model output to file
-# WARNING: this may take a long time to run
 mymodel <- function(formula, data = df3, family = "nbinomial", config = FALSE){
   model <- inla(formula = formula, data = data, family = family,control.family = list(link = "log"),
                 control.inla = list(strategy = 'adaptive'), 
@@ -46,9 +43,9 @@ mymodel <- function(formula, data = df3, family = "nbinomial", config = FALSE){
 }
 
 formula1 <- Y2 ~ 1 + f(T1, model = "iid") + f(T2, model = "iid") + basis_tr1 + basis_mt1 + f(S, model = "iid") + R
-name1 <- "A-R_temp"
 
-#####################################################
+##########sensitivity of the mean temperature lag within the best model (Model A-R) ################################
+name1 <- "A-R_temp"
 
 nlag_r <- 6
 basis_tr1 <- lag_variable_rainfall_3(df=df,nlag=nlag_r)
@@ -84,8 +81,10 @@ for(i in 1:length(labs)){
 fwrite(table_nb, file = paste0("Model/Number of mosquitoes per 1000 traps/nbinomial/Sen/",name1,"sensibility_temp.csv"), quote = FALSE, row.names = FALSE)
 
 
+
+##########sensitivity of the total rainfall lag within the best model (Model A-R) ################################
 name1 <- "A-R_rain"
-#####################################################
+
 nlag_t <- 2
 basis_mt1 <- lag_variable_temp_3(df=df,nlag=nlag_t)
 
@@ -155,10 +154,6 @@ fwrite(table_nb, file = paste0("Model/Number of mosquitoes per 1000 traps/nbinom
 dir.create("Model/")
 dir.create("Model/AOI full model/")
 
-## Model: To estimate AOI during the period from April 2020 to August 2022
-
-# create a function to run a model for each formula in the list and save the model output to file
-# WARNING: this may take a long time to run
 mymodel <- function(formula, data = df3, family = "binomial", config = FALSE){
   model <- inla(formula = formula, data = data, family = family, Ntrials = df1$Total.traps,control.family = list(link = "logit"),
                 control.inla = list(strategy = 'adaptive'), 
@@ -174,6 +169,8 @@ mymodel <- function(formula, data = df3, family = "binomial", config = FALSE){
 
 
 formula2 <- Y1 ~ 1 + f(T1, model = "iid") + f(T2, model = "iid") + basis_tr1 + basis_mt1 + f(S, model = "iid") + R
+
+##########sensitivity of the mean temperature lag within the best model (Model E-R) ################################
 name2 <- "E-R_temp"
 
 nlag_r <- 6
@@ -210,6 +207,8 @@ for(i in 1:length(labs)){
 
 fwrite(table_aoi, file = paste0("Model/AOI full model/Sen/",name2,"sensibility_temp.csv"), quote = FALSE, row.names = FALSE)
 
+
+##########sensitivity of the total rainfall lag within the best model (Model E-R) ################################
 name2 <- "E-R_rain"
 #####################################################
 nlag_t <- 2

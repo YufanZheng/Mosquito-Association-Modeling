@@ -167,57 +167,6 @@ loocv_a <- function(df0,df1,formula,model_all,num,k_fold=1){
   }
 }
 
-loocv_a_2 <- function(df0,df1,formula,model_all,num,k_fold=1){
-  filename <- paste("results/Model",num,"_loocv_result.csv",sep="")
-  
-  if(!file.exists(filename)){
-    print(num)
-    n <- dim(df1)[1] # number of samples
-    loo_pred <- rep(NA, n)
-    loo_predmin <- rep(NA, n)
-    loo_predmax <- rep(NA, n)
-    
-    # model function
-    mymodel <- function(formula, data = df3, family = "binomial", config = FALSE){
-      model <- inla(formula = formula, data = data, family = family, Ntrials = df1$Total.traps,control.family = list(link = "logit"),
-                    control.inla = list(strategy = 'adaptive',diagonal=100), 
-                    control.compute = list(dic = TRUE, config = config, 
-                                           cpo = TRUE, return.marginals = FALSE, waic = TRUE),
-                    control.fixed = list(correlation.matrix = TRUE, 
-                                         prec.intercept = 1, prec = 1),
-                    control.predictor = list(link = 1, compute = TRUE), 
-                    verbose = FALSE)
-      model <- inla.rerun(model)
-      return(model)
-    }
-    
-    ## loocv
-    for(i in 1:n) {
-      if(i%%(3*k_fold) == 1){
-        i_up <- i+(3*k_fold-1)
-        if(i+3*k_fold>n){
-          i_up <- n
-        }
-        # If y[i] = NA, this means that y[i] is not observed, hence gives no contribution to the likelihood.
-        # reference: https://www.r-inla.org/faq    please see question 7
-        print(i_up)
-        nummosquito_i <- replace(df0$Number.of.positive.traps, c(i:i_up), "NA")
-        df1$Number.of.positive.traps <- as.numeric(nummosquito_i)
-        dlnm_i <- mymodel(formula, data = df1, family = "binomial") #glm with out ith row
-        loo_pred[i:i_up] <- dlnm_i$summary.fitted.values$mean[i:i_up]
-        loo_predmin[i:i_up] <- dlnm_i$summary.fitted.values$`0.025quant`[i:i_up]
-        loo_predmax[i:i_up] <- dlnm_i$summary.fitted.values$`0.975quant`[i:i_up]
-      }
-    }
-    
-    df0$fittednum <- model_all$summary.fitted.values$mean
-    df0$predictednum <- loo_pred
-    df0$predictedmin <- loo_predmin
-    df0$predictedmax <- loo_predmax
-    
-    write.csv(df0, filename,row.names=F)
-  }
-}
 
 
 ## CV for Model E

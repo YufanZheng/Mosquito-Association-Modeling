@@ -128,10 +128,14 @@ projection_A <- function(df0,lab,name,i_low=64,i_up=87,basis_mt1,basis_tr1){
   write.csv(df_result, paste("results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
 }
 
+
+###### Projection results of extensiveness based on the best model
 lab <- "model5"
 name <- "E-R_1"
 projection_E(df0,lab,name,i_low=63,i_up=87,basis_mt1,basis_tr1)
 
+
+###### Projection results of abundance based on the best model
 lab <- "model5"
 name <- "A-R_1"
 projection_A(df0,lab,name,i_low=63,i_up=87,basis_mt1,basis_tr1)
