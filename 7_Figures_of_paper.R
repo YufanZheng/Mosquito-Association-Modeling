@@ -307,7 +307,7 @@ plot_lag_rain <- function(model,df,num){
   # find position of the terms associated with totalrain crossbasis
   indt <- grep("basis_tr1", model$names.fixed)
   
-  # extract predictions from the totalrain DLNM centred on overall mean totalrain (173mm)
+  # extract predictions from the totalrain DLNM centred on overall mean totalrain (300mm)
   predt <- crosspred(basis_tr1, coef = coef[indt], vcov=vcov[indt,indt],
                      model.link = "log", bylag = 0.25, cen = 300)
   
@@ -350,7 +350,7 @@ plot_lag_temp <- function(model,df,num){
   # find position of the terms associated with meantemp crossbasis
   indt <- grep("basis_mt1", model$names.fixed)
   
-  # extract predictions from the meantemp DLNM centred on overall mean meantemp (24 deg C)
+  # extract predictions from the meantemp DLNM centred on overall mean meantemp (20 deg C)
   predt <- crosspred(basis_mt1, coef = coef[indt], vcov=vcov[indt,indt],
                      model.link = 'log', bylag = 0.25, cen = 20)
   
