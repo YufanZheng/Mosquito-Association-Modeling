@@ -2,8 +2,6 @@ setwd(dirname(parent.frame(2)$filename))
 path <-  getwd()
 
 
-## Note: To compare the predictiveness of ovitrap and gravidtrap, we rescale the number of mosquitoes per 1000 traps and AOI to a 0-1 range.
-## Then compare the mean squared error after leave-one-out cross validation
 library(scales)
 library(ggplot2)
 
@@ -60,6 +58,8 @@ set.seed(1234)
 # setwd("D:/Bio/Dengue-Gravidtrap-and-Ovitrap-HK-main_20230211-add_mobility-all/")
 setwd(path)
 
+
+# standardized the extensiveness models results
 MSE <- c()
 n_row <- 0
 
@@ -109,6 +109,7 @@ write.csv(df_result, "results/MSE_normal_result_1.csv",row.names=F)
 
 
 
+# standardized the abundance models results
 MSE <- c()
 n_row <- 0
 

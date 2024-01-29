@@ -34,6 +34,7 @@ rownames(df1) <- 1:nrow(df1)
 rownames(df2) <- 1:nrow(df2)
 rownames(df3) <- 1:nrow(df3)
 
+# projection based on the Model E-R
 projection_E <- function(df0,lab,name,i_low=63,i_up=87,basis_mt1,basis_tr1){
   file_name <- paste0("Model/AOI full model/",lab,".RData")
   df_result <- read.csv(paste("Results/Model",name,"_loocv_normal_result.csv",sep=""))
@@ -81,6 +82,7 @@ projection_E <- function(df0,lab,name,i_low=63,i_up=87,basis_mt1,basis_tr1){
   write.csv(df_result, paste("results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
 }
 
+# projection based on the Model A-R
 projection_A <- function(df0,lab,name,i_low=64,i_up=87,basis_mt1,basis_tr1){
   file_name <- paste0("Model/Number of mosquitoes per 1000 traps/nbinomial/",lab,".RData")
   df_result <- read.csv(paste("Results/Model",name,"_loocv_normal_result.csv",sep=""))

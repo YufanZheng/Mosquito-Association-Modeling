@@ -1,7 +1,6 @@
 setwd(dirname(parent.frame(2)$filename))
 path <-  getwd()
 
-## Note: We will validate the three models by leave-one-month-out corss validation, and plot the observed AOI, model fitted values, and predictions.
 library(scales)
 
 # set the random seed
@@ -44,7 +43,7 @@ df1$lag2_workplaces <- df3$lag2_W
 df0 <- df1
 
 
-# LOOCV function for Mosquito numbers prediction model and save all the result in csv file
+# LOOCV function for abundance prediction model and save all the result in csv file
 # Args:
   # df0: used for perparing the target variable of data input of LOOCV
   # df1: used for data input of LOOCV
@@ -107,7 +106,7 @@ loocv_m <- function(df0,df1,formula,model_all,num,k_fold=1){
 }
 
 
-# LOOCV function for AOI/AGI prediction model and save all the result in csv file
+# LOOCV function for extensiveness prediction model and save all the result in csv file
 # Args:
   # df0: used for perparing the target variable of data input of LOOCV
   # df1: used for data input of LOOCV

@@ -18,10 +18,7 @@ setwd(path)
 #   basis_mt1: lagged variable of mean temperature
 #   basis_tr1: lagged variable of total rainfall
 #   P: Parks index
-#   RR: Retail and recreation index
-#   GP: Grocery and pharmacy index
 #   R: Residential index
-#   TS: Transit stations index
 #   W: Workplaces index
 #   
 
