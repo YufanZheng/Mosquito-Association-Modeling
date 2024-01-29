@@ -67,36 +67,36 @@ n_row <- 0
 num = "E_1"
 y <- 1
 name <- "E_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ## Model E-R
 num = "E-R_1"
 y <- 1
 name <- "E-R_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ## Model E-P
 num = "E-P_1"
 y <- 1
 name <- "E-P_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ## Model E-W
 num = "E-W_1"
 y <- 1
 name <- "E-W_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ######################################
@@ -105,7 +105,7 @@ MSE_matrix <- matrix(MSE, nrow=n_row, ncol=4, byrow=TRUE)
 df_result <- as.data.frame(MSE_matrix)
 colnames(df_result) <- c("Model","MSE_pre","MSE_fit","Name")
 
-write.csv(df_result, "results/MSE_normal_result_1.csv",row.names=F)
+write.csv(df_result, "Results/MSE_normal_result_1.csv",row.names=F)
 
 
 
@@ -117,27 +117,27 @@ n_row <- 0
 num = "A_1"
 y <- 2
 name <- "A_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ## Model A-R
 num = "A-R_1"
 y <- 2
 name <- "A-R_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 ## Model A-P
 num = "A-P_1"
 y <- 2
 name <- "A-P_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 
@@ -145,9 +145,9 @@ n_row <- n_row+1
 num = "A-W_1"
 y <- 2
 name <- "A-W_1"
-result <- assessment(p1=paste("results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
+result <- assessment(p1=paste("Results/Model",num,"_loocv_result.csv",sep=""),y=y,num=num,name=name)
 MSE <- append(result$mse_result,MSE)
-write.csv(result$df,paste("results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
+write.csv(result$df,paste("Results/Model",num,"_loocv_normal_result.csv",sep=""),row.names=F)
 n_row <- n_row+1
 
 
@@ -157,6 +157,6 @@ MSE_matrix <- matrix(MSE, nrow=n_row, ncol=4, byrow=TRUE)
 df_result <- as.data.frame(MSE_matrix)
 colnames(df_result) <- c("Model","MSE_pre","MSE_fit","Name")
 
-write.csv(df_result, "results/MSE_normal_result_2.csv",row.names=F)
+write.csv(df_result, "Results/MSE_normal_result_2.csv",row.names=F)
 
 

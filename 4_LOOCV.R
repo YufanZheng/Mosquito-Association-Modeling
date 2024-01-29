@@ -10,7 +10,7 @@ source(paste(path,"/1_Load_packages_data.R",sep=""))
 
 setwd(path)
 
-dir.create("results/")
+dir.create("Results/")
 
 df1$lag1_Meantemp <- df4$lag1_Meantemp
 df1$lag2_Meantemp <- df4$lag2_Meantemp
@@ -52,7 +52,7 @@ df0 <- df1
   # num: The model label number
   # k_fold: The parameter for setting k-fold, for example, if k_fold=1, which means that use LOOCV
 loocv_m <- function(df0,df1,formula,model_all,num,k_fold=1){
-  filename <- paste("results/Model",num,"_loocv_result.csv",sep="")
+  filename <- paste("Results/Model",num,"_loocv_result.csv",sep="")
   
   if(!file.exists(filename)){
     print(num)
@@ -115,7 +115,7 @@ loocv_m <- function(df0,df1,formula,model_all,num,k_fold=1){
   # num: The model label number
   # k_fold: The parameter for setting k-fold, for example, if k_fold=1, which means that use LOOCV
 loocv_a <- function(df0,df1,formula,model_all,num,k_fold=1){
-  filename <- paste("results/Model",num,"_loocv_result.csv",sep="")
+  filename <- paste("Results/Model",num,"_loocv_result.csv",sep="")
   
   if(!file.exists(filename)){
     print(num)

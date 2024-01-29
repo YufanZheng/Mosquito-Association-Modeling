@@ -23,7 +23,7 @@ filename <- "Data/Three districts all dataset.csv"
 
 
 ####### Figure 2 (A)#######
-filename <- "results/ModelE_1_loocv_result.csv"
+filename <- "Results/ModelE_1_loocv_result.csv"
 df <- read.csv(filename)
 df$Date <- as.Date(df$Date)
 
@@ -290,7 +290,7 @@ plot_result_projection_A <- function(df,num,i=63,i_up=87){
 
 ####### Figure 3 (B)#######
 lab <- "A-R_1"
-data <- read.csv(paste("results/Model",lab,"_loocv_result_projection.csv",sep=""))
+data <- read.csv(paste("Results/Model",lab,"_loocv_result_projection.csv",sep=""))
 num <- "A-R"
 plot_result_projection_A(df=data,num=num,i=63,i_up=87)
 ############################
@@ -440,7 +440,7 @@ dev.off()
 
 
 ####### Figure S2 #######
-filename <- "results/ModelE_1_loocv_result.csv"
+filename <- "Results/ModelE_1_loocv_result.csv"
 df <- read.csv(filename)
 df$Date <- as.Date(df$Date)
 
@@ -571,7 +571,7 @@ plot_result_projection_E <- function(df,num,i=63,i_up=87){
 
 ####### Figure S4 (B)#######
 lab <- "E-R_1"
-data <- read.csv(paste("results/Model",lab,"_loocv_result_projection.csv",sep=""))
+data <- read.csv(paste("Results/Model",lab,"_loocv_result_projection.csv",sep=""))
 num <- "E-R"
 plot_result_projection_E(df=data,num=num,i=63,i_up=87)
 ############################

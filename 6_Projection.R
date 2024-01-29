@@ -79,7 +79,7 @@ projection_E <- function(df0,lab,name,i_low=63,i_up=87,basis_mt1,basis_tr1){
   df_result$projection_2[i_low:i_up] <- projection
   df_result$projection_2_normal[i_low:i_up] <- projection / sd_value
   
-  write.csv(df_result, paste("results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
+  write.csv(df_result, paste("Results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
 }
 
 # projection based on the Model A-R
@@ -127,7 +127,7 @@ projection_A <- function(df0,lab,name,i_low=64,i_up=87,basis_mt1,basis_tr1){
   df_result$projection_2[i_low:i_up] <- projection
   df_result$projection_2_normal[i_low:i_up] <- projection / sd_value
   
-  write.csv(df_result, paste("results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
+  write.csv(df_result, paste("Results/Model",name,"_loocv_result_projection.csv",sep=""),row.names=F)
 }
 
 
