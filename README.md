@@ -1,5 +1,7 @@
 # Association of Human Mobility and Weather Conditions on Dengue Mosquito in Hong Kong during the COVID-19 Pandemic
 
+**DOI:** [https://doi.org/10.1101/2024.04.17.24306004](https://doi.org/10.1101/2024.04.17.24306004)
+
 ## Paper Authors
 
 Yufan Zheng, Keqi Yue, Eric W. M. Wong, Hsiang-Yu Yuan
