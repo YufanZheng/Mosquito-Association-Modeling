@@ -24,11 +24,6 @@ Human mobility indices for Hong Kong were sourced from Google, representing beha
 ### Mosquito Activity Data
 Mosquito activity data, provided by the Food and Environmental Hygiene Department, were collected using Gravidtraps since 2020 to monitor *Aedes albopictus*. ([https://www.fehd.gov.hk/english/pestcontrol/risk-pest-mosquito.html](https://www.fehd.gov.hk/english/pestcontrol/risk-pest-mosquito.html))
 
-Two indices were measured:
-- **Area Density Index (ADI):** Number of mosquitoes captured, indicating abundance. 
-- **Area Gravidtrap Index (AGI):** Proportion of traps with positive results, indicating distribution. 
-These metrics were used to assess mosquito abundance and extensiveness in Hong Kong.
-
   
 ### Table 1: The Monitoring Sites of Mosquito Activity Data in Three Areas in Hong Kong
 
