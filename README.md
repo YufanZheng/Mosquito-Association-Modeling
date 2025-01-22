@@ -14,15 +14,19 @@ This study aimed to assess the influence of human mobility on the abundance and 
 ## Data Description
 
 The data folder contains the following datasets:
-1. **Mosquito Activity Data**:
-   - Records of *Aedes albopictus* abundance in Hong Kong.
-   - Aggregated at regular intervals to reflect mosquito activity trends.
-2. **Weather Data**:
-   - Total rainfall and mean temperature measurements.
-   - Time series format with daily/weekly resolution.
-3. **Human Mobility Data**:
-   - Derived from mobility tracking systems, capturing relative movement levels during the COVID-19 pandemic.
-   - Processed to match the temporal and spatial resolution of mosquito activity data.
+
+### Weather Data
+Weather data were collected from the Hong Kong Observatory across three regions: Hong Kong Island & Kowloon, New Territories East, and New Territories West (Table 1). The dataset includes daily total rainfall and mean temperature from April 2020 to August 2022. Monthly averages for these metrics were calculated to predict mosquito abundance and extensiveness (Table 2). Weather factors for each region were derived by averaging data from selected weather stations.
+
+### Human Mobility Data
+Human mobility indices for Hong Kong were sourced from Google, representing behavioral changes and social distancing during the COVID-19 pandemic. Three indices—residential, workplace, and parks—were selected to capture mobility patterns relevant to mosquito-borne disease risk. Indices were calculated relative to a baseline day (median values from Jan 3–Feb 6, 2020) and aggregated monthly for model predictions.
+
+### Mosquito Activity Data
+Mosquito activity data, provided by the Food and Environmental Hygiene Department, were collected using Gravidtraps since 2020 to monitor *Aedes albopictus*. Two indices were measured:
+- **Area Density Index (ADI):** Number of mosquitoes captured, indicating abundance.
+- **Area Gravidtrap Index (AGI):** Proportion of traps with positive results, indicating distribution. 
+These metrics were used to assess mosquito abundance and extensiveness in Hong Kong.
+
   
 ### Table 1: The Monitoring Sites of Mosquito Activity Data in Three Areas in Hong Kong
 
@@ -36,35 +40,33 @@ The data folder contains the following datasets:
 
 | Areas                    | Weather Stations (temperature)                                   | Weather Stations (rainfall)                                      |
 |--------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
-| **Hong Kong Island & Kowloon** | King’s Park, Happy Valley, Wong Chuk Hang                      | Quarry Bay, Cape D'Aguilar, Happy Valley, King’s Park            |
-| **New Territories East** | Ta Kwu Ling, Sha Tin, Tai Mei Tuk                               | Ta Kwu Ling, Sha Tin, Tai Mei Tuk                               |
-| **New Territories West** | New Tsing Yi Station, Sha Lo Wan, Cheung Chau, Tuen Mun Children and Juvenile Home, Wetland Park | Sha Lo Wan, Cheung Chau, Tuen Mun Children and Juvenile Home, Wetland Park |
+| Hong Kong Island & Kowloon | King’s Park, Happy Valley, Wong Chuk Hang                      | Quarry Bay, Cape D'Aguilar, Happy Valley, King’s Park            |
+| New Territories East | Ta Kwu Ling, Sha Tin, Tai Mei Tuk                               | Ta Kwu Ling, Sha Tin, Tai Mei Tuk                               |
+| New Territories West | New Tsing Yi Station, Sha Lo Wan, Cheung Chau, Tuen Mun Children and Juvenile Home, Wetland Park | Sha Lo Wan, Cheung Chau, Tuen Mun Children and Juvenile Home, Wetland Park |
 
-All data have been pre-processed for compatibility with the scripts in this repository.
+## Folders and Code sources
 
-## Data and Code sources
+1. **Data:** A folder containing the processed data, including mosquito activity, weather data, and human mobility data.
 
-**Data:** a folder containing the processed data, including mosquito activity, weather data, and human mobility data.
+2. **Model:** A folder containing all fitted models and sensitivity analysis models. In addition, summarizes the fitted model results and sensitivity analysis results.
 
-**Model:** a folder containing all fitted models and sensitivity analysis models. In addition, summarizes the fitted model results and sensitivity analysis results.
+3. **Paper:** A folder containing all figures in the paper.
 
-**Paper:** a folder containing all figures in the paper.
+4. **results:** a folder containing fitted, leave-one-out cross-validation (LOOCV), and projection results.
 
-**results:** a folder containing fitted, leave-one-out cross-validation (LOOCV), and projection results.
+5. **1_Load_packages_data.R:** R script to load data, and prepare the input variables.
 
-**1_Load_packages_data.R:** R script to load data, and prepare the input variables.
+6. **2_Model_Construction.R:** R script to construct models and record results.
 
-**2_Model_Construction.R:** R script to construct models and record results.
+7. **3_Model_Sensibility.R:** R script to analyze the model parameter sensibility.
 
-**3_Model_Sensibility.R:** R script to analyze the model parameter sensibility.
+8. **4_LOOCV.R:** R script to validate the performance of models by the LOOCV.
 
-**4_LOOCV.R:** R script to validate the performance of models by the LOOCV.
+9. **5_Standardized.R:** R script to standardize the fitted results (output).
 
-**5_Standardized.R:** R script to standardize the fitted results (output).
+10. **6_Projection.R:** R script to project the mosquito activity with different human mobility scenarios.
 
-**6_Projection.R:** R script to project the mosquito activity with different human mobility scenarios.
-
-**7_Figures_of_paper.R:** R script to draw all figures in the paper.
+11. **7_Figures_of_paper.R:** R script to draw all figures in the paper.
 
 
 ## How to Run the Code
