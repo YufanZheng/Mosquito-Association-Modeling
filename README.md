@@ -16,14 +16,14 @@ This study aimed to assess the influence of human mobility on the abundance and 
 The data folder contains the following datasets:
 
 ### Weather Data
-Weather data were collected from the Hong Kong Observatory across three regions: Hong Kong Island & Kowloon, New Territories East, and New Territories West (Table 1). The dataset includes daily total rainfall and mean temperature from April 2020 to August 2022. Monthly averages for these metrics were calculated to predict mosquito abundance and extensiveness (Table 2). Weather factors for each region were derived by averaging data from selected weather stations.
+Weather data were collected from the Hong Kong Observatory across three regions: Hong Kong Island & Kowloon, New Territories East, and New Territories West (Table 1). The dataset includes daily total rainfall and mean temperature from April 2020 to August 2022. Monthly averages for these metrics were calculated to predict mosquito abundance and extensiveness (Table 2). Weather factors for each region were derived by averaging data from selected weather stations. [https://www.hko.gov.hk/tc/index.html](https://www.hko.gov.hk/tc/index.html)
 
 ### Human Mobility Data
-Human mobility indices for Hong Kong were sourced from Google, representing behavioral changes and social distancing during the COVID-19 pandemic. Three indices—residential, workplace, and parks—were selected to capture mobility patterns relevant to mosquito-borne disease risk. Indices were calculated relative to a baseline day (median values from Jan 3–Feb 6, 2020) and aggregated monthly for model predictions.
+Human mobility indices for Hong Kong were sourced from Google, representing behavioral changes and social distancing during the COVID-19 pandemic. Three indices—residential, workplace, and parks—were selected to capture mobility patterns relevant to mosquito-borne disease risk. Indices were calculated relative to a baseline day (median values from Jan 3–Feb 6, 2020) and aggregated monthly for model predictions. [https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/)
 
 ### Mosquito Activity Data
 Mosquito activity data, provided by the Food and Environmental Hygiene Department, were collected using Gravidtraps since 2020 to monitor *Aedes albopictus*. Two indices were measured:
-- **Area Density Index (ADI):** Number of mosquitoes captured, indicating abundance.
+- **Area Density Index (ADI):** Number of mosquitoes captured, indicating abundance. [https://www.fehd.gov.hk/english/pestcontrol/risk-pest-mosquito.html](https://www.fehd.gov.hk/english/pestcontrol/risk-pest-mosquito.html)
 - **Area Gravidtrap Index (AGI):** Proportion of traps with positive results, indicating distribution. 
 These metrics were used to assess mosquito abundance and extensiveness in Hong Kong.
 
