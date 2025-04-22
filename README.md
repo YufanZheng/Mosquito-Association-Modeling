@@ -1,6 +1,7 @@
-# Association of Human Mobility and Weather Conditions on Dengue Mosquito in Hong Kong during the COVID-19 Pandemic
+# Impact of human mobility and weather conditions on Dengue mosquito abundance during the COVID-19 pandemic in Hong Kong
 
 **DOI:** [https://doi.org/10.1101/2024.04.17.24306004](https://doi.org/10.1101/2024.04.17.24306004)
+**DOI:** [https://doi.org/10.1016/j.idm.2025.04.002](https://doi.org/10.1016/j.idm.2025.04.002)
 
 ## Paper Authors
 
@@ -95,3 +96,15 @@ Follow these steps to reproduce the results:
 
 - Ensure all required R packages are installed before running the scripts.
 - Adjust file paths in the scripts to match your local directory structure if necessary.
+
+## Cite
+@article{zheng2025impact,
+  title={Impact of human mobility and weather conditions on Dengue mosquito abundance during the COVID-19 pandemic in Hong Kong},
+  author={Zheng, Yufan and Yue, Keqi and Wong, Eric WM and Yuan, Hsiang-Yu},
+  journal={Infectious Disease Modelling},
+  volume={10},
+  number={3},
+  pages={840--849},
+  year={2025},
+  publisher={Elsevier}
+}
